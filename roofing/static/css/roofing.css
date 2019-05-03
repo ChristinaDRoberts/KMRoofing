@@ -22,7 +22,7 @@
 }
 
 .sub-main{
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     width: 80%;
     height: 80%;
     margin: 0 auto;
@@ -139,7 +139,7 @@ body {
 .main-content {
     background: black;
     color: white;
-  height: 50vh;
+  height: 40vh;
   position: relative;
   text-align: center;
   width: 100%;
