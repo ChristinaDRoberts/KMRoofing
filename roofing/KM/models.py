@@ -26,7 +26,7 @@ class ServicesIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
-        blogpages = self.get_children().live().order_by('-first_published_at')
+        servicespages = self.get_children().live().order_by('-first_published_at')
         context['servicespages'] = servicespages
         return context
 
@@ -39,11 +39,11 @@ class ServicePageTag(TaggedItemBase):
 
 
 class ServicesPage(Page):
-    date = models.DateField("Post date")
+    # date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
     body = RichTextField(blank=True)
     tags = ClusterTaggableManager(through=ServicePageTag, blank=True)
-    categories = ParentalManyToManyField('roofing.BlogCategory', blank=True)
+    # categories = ParentalManyToManyField('roofing.RoofingCategory', blank=True)
 
     def main_image(self):
         gallery_item = self.gallery_images.first()
@@ -58,9 +58,9 @@ class ServicesPage(Page):
     ]
     content_panels = Page.content_panels + [
             MultiFieldPanel([
-                FieldPanel('date'),
+                # FieldPanel('date'),
                 FieldPanel('tags'),
-                FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
+                # FieldPanel('categories', widget=forms.CheckboxSelectMultiple),
             ], heading="Services information"),
             FieldPanel('intro'),
             FieldPanel('body'),

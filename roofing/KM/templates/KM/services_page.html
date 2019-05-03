@@ -2,7 +2,7 @@
 
 {% load wagtailcore_tags wagtailimages_tags %}
 
-{% block body_class %}template-blogpage{% endblock %}
+{% block body_class %}template-servicespage{% endblock %}
 
 {% block content %}
     <h1>{{ page.title }}</h1>
@@ -23,7 +23,7 @@
     {% endwith %}
 
     <div class="intro">{{ page.intro }}</div>
-    <div class="interview-div">
+    <div class="services-div">
     {{ page.body|richtext }}
     </div>
 
