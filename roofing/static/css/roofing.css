@@ -26,8 +26,10 @@
     width: 80%;
     height: 80%;
     margin: 0 auto;
+}
 
-
+.main-head{
+    font-size: 100px;
 }
 
 .rich-text{
