@@ -32,6 +32,7 @@
     /*font-size: 100px;*/
 /*}*/
 
+
 .rich-text{
     padding-top: 50px;
 }
@@ -96,15 +97,19 @@
 
 }
 
+
+
 @keyframes sheen {
   100% {
     transform: rotateZ(60deg) translate(1em, -9em);
   }
 }
 
+
 .read-btn:hover::after, .read-btn:focus::after {
   animation: sheen 1s forwards;
 }
+
 
 
 .card{

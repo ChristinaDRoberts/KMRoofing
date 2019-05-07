@@ -13,8 +13,22 @@ from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 from wagtail.search import index
 
+from wagtail.images.blocks import ImageChooserBlock
+from wagtail.core.fields import StreamField
+from wagtail.core import blocks
+from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 
+class AboutPage(Page):
+    intro = RichTextField(blank=True)
+    body = StreamField([
+        ('heading', blocks.CharBlock(classname="full title")),
+        ('paragraph', blocks.RichTextBlock()),
+        ('image', ImageChooserBlock()),
+    ])
 
+    content_panels = Page.content_panels + [
+        StreamFieldPanel('body'),
+    ]
 
 class ServicesIndexPage(Page):
     intro = RichTextField(blank=True)
