@@ -30,6 +30,7 @@ class AboutPage(Page):
         StreamFieldPanel('body'),
     ]
 
+
 class ServicesIndexPage(Page):
     intro = RichTextField(blank=True)
 

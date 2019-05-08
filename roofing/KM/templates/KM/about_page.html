@@ -2,6 +2,18 @@
 
 {% load wagtailcore_tags wagtailimages_tags %}
 
+{% load menu_tags %}
+
+{% main_menu max_levels=3 use_specific=USE_SPECIFIC_TOP_LEVEL template="menus/custom_main_menu.html" sub_menu_template="menus/custom_sub_menu.html" %}
+{% for item in menu_items %}
+    <li class="{{ item.active_class }}">
+        <a href="{{ item.href }}">{{ item.text }}</a>
+        {% if item.has_children_in_menu %}
+            {{ item.sub_menu.render_to_template }}
+        {% endif %}
+    </li>
+{% endfor %}
+
 {% block body_class %}template-about_page{% endblock %}
 
 
@@ -10,7 +22,6 @@
     <section class="about-main">
         <div class="title-div-about">{{ page.title }}</div>
         <div class="body-about heading-about">{{ page.body}}</div>
-{#        <div class="body-about img-about">{{ page.img }}</div>#}
-{#        <div class="body-about para-about">{{ page.paragraph }}</div>#}
+
     </section>
 {% endblock %}
