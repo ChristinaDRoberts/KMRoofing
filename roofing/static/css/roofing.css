@@ -54,6 +54,14 @@
 
 }
 
+.about-main{
+    background-color: lightgray;
+    text-align: center;
+}
+
+/*img{*/
+    /*text-align: center;*/
+/*}*/
 .services-div{
   text-align: left;
   padding-left:10%;
@@ -61,6 +69,17 @@
   padding-top: 4%;
 }
 
+.title-div-about{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.body-about{
+    text-align: center;
+    height: 20%;
+
+}
 
 .back{
   color: black;

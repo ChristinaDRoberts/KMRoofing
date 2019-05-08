@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% load wagtailcore_tags wagtailimages_tags %}
+
+{% block body_class %}template-about_page{% endblock %}
+
+
+
+{% block content %}
+    <section class="about-main">
+        <div class="title-div-about">{{ page.title }}</div>
+        <div class="body-about heading-about">{{ page.body}}</div>
+{#        <div class="body-about img-about">{{ page.img }}</div>#}
+{#        <div class="body-about para-about">{{ page.paragraph }}</div>#}
+    </section>
+{% endblock %}

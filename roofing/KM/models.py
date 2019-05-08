@@ -21,7 +21,7 @@ from wagtail.admin.edit_handlers import FieldPanel, StreamFieldPanel
 class AboutPage(Page):
     intro = RichTextField(blank=True)
     body = StreamField([
-        ('heading', blocks.CharBlock(classname="full title")),
+        # ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RichTextBlock()),
         ('image', ImageChooserBlock()),
     ])
