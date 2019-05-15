@@ -1,3 +1,27 @@
+.template-servicespage{
+    text-align: center;
+}
+
+/*.services-div{*/
+    /*text-align: center;*/
+    /*margin-left: 30%;*/
+/*}*/
+
+
+/*.richtext-image.left {*/
+    /*height:10%;*/
+    /*width: 10%;*/
+    /*display: inline-block;*/
+
+/*}*/
+
+
+/*.richtext-image.right{*/
+    /*height:10%;*/
+    /*width: 10%;*/
+    /*display: inline-block;*/
+    /*text-align: right;*/
+/*}*/
 .main-div{
     text-align: center;
     position: relative;
@@ -28,10 +52,6 @@
     margin: 0 auto;
 }
 
-/*.main-head{*/
-    /*font-size: 100px;*/
-/*}*/
-
 
 .rich-text{
     padding-top: 50px;
@@ -55,18 +75,16 @@
 }
 
 .about-main{
-    background-color: lightgray;
+    /*background-color: lightgray;*/
     text-align: center;
 }
 
-/*img{*/
-    /*text-align: center;*/
-/*}*/
+
 .services-div{
-  text-align: left;
+  /*text-align: left;*/
   padding-left:10%;
   padding-right: 10%;
-  padding-top: 4%;
+  /*padding-top: 4%;*/
 }
 
 .title-div-about{
@@ -77,9 +95,23 @@
 
 .body-about{
     text-align: center;
-    height: 20%;
-
+    height: 10%;
 }
+
+.body-about img{
+    height: 40%;
+    width: 30%;
+}
+
+@media screen and (max-width: 900px) {
+  .body-about img {
+      height:50%;
+      width: 40%;
+
+
+  }
+}
+
 
 .back{
   color: black;
@@ -156,10 +188,6 @@
 
 /*SEE https://codepen.io/Eprz/pen/raWjJj*/
 
-body {
-    /*background: ;*/
-    /*color: black;*/
-}
 .main-content {
     background: black;
     color: white;
@@ -172,8 +200,8 @@ body {
   animation-iteration-count:1;
   animation: 3s explode_title 1 ;
   font-family: "Raleway";
-  font-size: 60px;
-  font-weight: 600;
+  font-size: 50px;
+  font-weight: 400;
   position: absolute;
   text-transform: uppercase;
   top: 150px;
@@ -187,8 +215,8 @@ body {
   display: block;
   font-family: "Titillium Web";
   font-size: 43px;
-  font-weight: 700;
-    margin-top: 20px;
+  font-weight: 500;
+    margin-top: 15px;
   position: absolute;
   text-align: center;
   text-transform: uppercase;
@@ -196,6 +224,37 @@ body {
   transform: translate3d(0, -200px, 0);
   width: 100%;
 }
+
+
+
+@media screen and (max-width: 900px) {
+  .main-content h1 {
+      font-size: 200%;
+      /*margin: 6%;*/
+      /*width:150%;*/
+
+  }
+}
+
+/*@media screen and (max-width: 900px) {*/
+  /*.main-content {*/
+      /*height:60vh;*/
+      /*!*margin: 6%;*!*/
+      /*!*width:150%;*!*/
+
+  /*}*/
+/*}*/
+
+@media screen and (max-width: 900px) {
+  .main-content .bounced-word {
+      font-size: 150%;
+      /*margin: 6%;*/
+      /*width:150%;*/
+
+  }
+}
+
+
 @keyframes explode_title {
   10% {
     transform: scaleY(0.2);
