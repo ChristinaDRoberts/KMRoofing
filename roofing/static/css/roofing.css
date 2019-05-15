@@ -14,7 +14,18 @@
     /*display: inline-block;*/
 
 /*}*/
+/*.richtext-image{*/
 
+/*}*/
+
+@media screen and (max-width: 900px) {
+  .rich-text img {
+      height:60%;
+      width: 80%;
+
+
+  }
+}
 
 /*.richtext-image.right{*/
     /*height:10%;*/
@@ -175,8 +186,6 @@
   margin: 2%;
   border: 1px solid lightslategrey;
 }
-
-
 
 
 
